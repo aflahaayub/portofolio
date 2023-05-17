@@ -16,14 +16,12 @@ export const About = ({ onCursor, props }) => {
     <>
       <StyleProjects
         onMouseEnter={onCursor}
-        ref={scrollRef}
-        data-scroll-container
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4 }}
       >
         <Navbar onCursor={onCursor} name={"About"} />
-        <Container ref={scrollRef} data-scroll-section>
+        <Container>
           <Grid frame={"1fr 2fr"}>
             <Flex borderLeft direction={"column"}>
               <Photo

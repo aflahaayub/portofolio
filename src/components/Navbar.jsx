@@ -6,13 +6,14 @@ import { motion } from "framer-motion"
 
 const Nav = styled(motion.div)`
   display: flex;
-  position: relative;
+  position: sticky;
+  // position: relative;
   top: 0;
   z-index: 100;
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-top: 2rem;
+  // padding-top: 2rem;
 `
 
 const NavContainer = styled(motion.div)`

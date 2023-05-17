@@ -4,20 +4,21 @@ import { motion } from "framer-motion"
 export const StyleProjects = styled(motion.div)``
 
 export const Container = styled(motion.div)`
-  padding: 0 1.5rem;
-  position: relative;
+  display: inline-block;
+  padding: 0.5rem;
+  // position: relative;
 
   @media (min-width: 52em) {
     padding: 1rem 9rem;
-    margin-top: 80px;
+    // margin-top: 80px;
   }
 `
 export const Project = styled(motion.div)`
   margin: 3vw auto;
-  padding-bottom: 5rem;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
-  max-width: 100%
-  position:relative;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  // position:relative;
 `
 export const Wrap = styled(motion.div)`
   box-sizing: border-box;

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Routes, Route, useLocation } from "react-router-dom"
 
 //styled
@@ -40,7 +40,7 @@ const GlobalStyle = createGlobalStyle`
     overscroll-behavior: none;
     overflow-x: hidden;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
   }
 
   svg{
@@ -61,12 +61,15 @@ export const Layout = ({ children }) => {
   const { cursorStyles } = useGlobalStateContext()
   const dispatch = useGlobalDispatchContext()
 
-  console.log(location)
   const onCursor = cursorType => {
     let cursor = (cursorStyles.includes(cursorType) && cursorType) || false
 
     dispatch({ type: "CURSOR_TYPE", cursorType: cursor })
   }
+
+  useEffect(() => {
+    onCursor(false)
+  }, [location])
   return (
     <>
       <GlobalStyle />

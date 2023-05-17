@@ -4,6 +4,7 @@ import { Cursor } from "../styles/cursorStyles"
 
 //context
 import { useGlobalStateContext } from "../Context/globalContext"
+import { useLocation } from "react-router-dom"
 
 export const CustomCursor = () => {
   const { cursorType } = useGlobalStateContext()

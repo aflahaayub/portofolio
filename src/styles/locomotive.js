@@ -1,6 +1,7 @@
 import { css } from "styled-components"
 /*! locomotive-scroll v4.0.6 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
 export const Locomotive = css`
+  /*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
   html.has-scroll-smooth {
     overflow: hidden;
   }
@@ -21,7 +22,6 @@ export const Locomotive = css`
   }
 
   [data-scroll-direction="horizontal"] [data-scroll-container] {
-    white-space: nowrap;
     height: 100vh;
     display: inline-block;
     white-space: nowrap;
@@ -31,7 +31,7 @@ export const Locomotive = css`
     display: inline-block;
     vertical-align: top;
     white-space: nowrap;
-    height: 100%;
+    height: 100vh;
   }
 
   .c-scrollbar {
@@ -39,7 +39,7 @@ export const Locomotive = css`
     right: 0;
     top: 0;
     width: 11px;
-    height: 100%;
+    height: 100vh;
     transform-origin: center right;
     transition: transform 0.3s, opacity 0.3s;
     opacity: 0;

@@ -57,14 +57,10 @@ const dataProjects = [
 ]
 
 export const Projects = ({ onCursor }) => {
-  const { scrollRef } = useSmoothScroll()
-
   return (
     <>
       <StyleProjects
         onMouseEnter={onCursor}
-        ref={scrollRef}
-        data-scroll-container
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4 }}
@@ -74,7 +70,7 @@ export const Projects = ({ onCursor }) => {
         <Container>
           {dataProjects.length > 0 &&
             dataProjects.map((data, index) => (
-              <Project key={index} ref={scrollRef} data-scroll-section>
+              <Project key={index}>
                 <Wrap>
                   <img src={`${data.img}`} alt="projects" />
                 </Wrap>

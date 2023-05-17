@@ -16,7 +16,7 @@ export const OtherPage = styled(Link)`
   align-items: center;
   justify-content: space-evenly;
   text-transform: uppercase;
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.08rem;
   color: white;
@@ -38,6 +38,10 @@ export const OtherPage = styled(Link)`
     css`
       flex-grow: 2;
     `}
+
+  @media (max-width: 52rem) {
+    font-size: 1.3rem;
+  }
 `
 
 export const Main = styled(motion.div)`

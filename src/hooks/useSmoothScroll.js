@@ -5,17 +5,16 @@ import LocomotiveScroll from "locomotive-scroll"
 export const useSmoothScroll = () => {
   const scrollRef = useRef()
   const location = useLocation()
-
-  console.log(location)
-  console.log(scrollRef)
-
   useEffect(() => {
     const loadImg = require("imagesloaded")
-    // const img = document.querySelectorAll("img")
+    const img = document.querySelectorAll("img")
     if (document.querySelector("[data-scroll-container]")) {
       const locoScroll = new LocomotiveScroll({
         el: document.querySelector("[data-scroll-container]"),
         smooth: true,
+        getSpeed: true,
+        getDirection: true,
+        // offset: ["15%", 0],
         tablet: {
           smooth: true,
         },
@@ -23,7 +22,13 @@ export const useSmoothScroll = () => {
           smooth: true,
         },
       })
+
+      // new ResizeObserver(() => locoScroll.update()).observe(
+      //   document.querySelector("[data-scroll-container]")
+      // )
+
       // loadImg(img, () => locoScroll.update())
+
       return () => {
         if (locoScroll) locoScroll.destroy()
       }
